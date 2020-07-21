@@ -1,22 +1,26 @@
 {
 	"version": "2.0.0",
-	"tasks": [
+	"tasks": 
+	[
 		{
-			"label": "C: gcc.exe debug active file",
+			"label": "Build and debug",
 			"type": "shell",
-			"command": "gcc",
-			"args": [
+			"command": "g++",
+			"args": 
+			[
 				"-g",
 				"${relativeFile}",
 				"-o",
 				"${fileBasenameNoExtension}.exe"
 			]
 		},
+		
 		{
-			"label": "C/C++: gcc.exe build active file",
+			"label": "Compile and run",
 			"type": "shell",
-			"command": "gcc",
-			"args": [
+			"command": "g++",
+			"args": 
+			[
 				"-g",
 				"${relativeFile}",
 				"-o",
@@ -24,17 +28,24 @@
 				"&&",
 				"${fileBasenameNoExtension}.exe"
 			],
-			"group": {
+			
+			"group": 
+			{
 				"kind": "build",
 				"isDefault": true
 			},
-			"problemMatcher": {
-				"owner": "c",
-				"fileLocation": [
+			
+			"problemMatcher": 
+			{
+				"owner": "cpp",
+				"fileLocation": 
+				[
 					"relative",
 					"${workspaceRoot}"
 				],
-				"pattern": {
+				
+				"pattern": 
+				{
 					"regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
 					"file": 1,
 					"line": 2,
