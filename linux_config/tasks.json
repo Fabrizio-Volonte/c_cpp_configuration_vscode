@@ -1,24 +1,26 @@
 {
 	"version": "2.0.0",
-	"tasks": [
+	"tasks": 
+	[
 		{
 			"label": "debug",
 			"type": "shell",
-			"command": "",
-			"args": [
-				"g++",
+			"command": "g++",
+			"args": 
+			[
 				"-g",
 				"${relativeFile}",
 				"-o",
-				"a.exe"
+				"${fileBasenameNoExtension}.out",
 			]
 		},
+		
 		{
 			"label": "Compile and run",
 			"type": "shell",
-			"command": "",
-			"args": [
-				"g++",
+			"command": "g++",
+			"args": 
+			[
 				"-g",
 				"${relativeFile}",
 				"-o",
@@ -28,17 +30,24 @@
 				"&&",
 				"./${fileBasenameNoExtension}.out"
 			],
-			"group": {
+			
+			"group": 
+			{
 				"kind": "build",
 				"isDefault": true
 			},
-			"problemMatcher": {
+			
+			"problemMatcher": 
+			{
 				"owner": "cpp",
-				"fileLocation": [
+				"fileLocation": 
+				[
 					"relative",
 					"${workspaceRoot}"
 				],
-				"pattern": {
+				
+				"pattern": 
+				{
 					"regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
 					"file": 1,
 					"line": 2,
@@ -48,5 +57,6 @@
 				}
 			}
 		},
+		
 	]
 }
