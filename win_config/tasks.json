@@ -3,7 +3,7 @@
 	"tasks": 
 	[
 		{
-			"label": "Build and debug",
+			"label": "Compile and debug",
 			"type": "shell",
 			"command": "g++",
 			"args": 
