@@ -26,7 +26,7 @@
 				"-o",
 				"${fileBasenameNoExtension}.exe",
 				"&&",
-				"${fileBasenameNoExtension}.exe"
+				".\\${fileBasenameNoExtension}.exe"
 			],
 			
 			"group": 
